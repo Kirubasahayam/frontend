@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <form action="sign.html">
+    <h1>Internship Job Application Form</h1>
+    <div>
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" id="name" maxlength="10" value="canditate" required>
+    </div>
+    <div>
+        <label for="email">Email Address:</label>
+        <input type="email" name="name" id="name" placeholder="you@example.com" required>
+    </div>
+    <div>
+        <label for="num">Phone Number:</label>
+         <input type="number" name="num" id="num" placeholder="10-digit number" required>
+    </div>
+    <div>
+        <label for="pass">Create Password:</label>
+         <input type="password" name="pass" id="pass" placeholder="Minimum 6 characters" required>
+    </div>
+    <div>
+        <label>Gender:</label>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+    </div>
+    <div>
+         <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+    </div>
+     <div>
+         <input type="radio" name="gender" id="prefer">
+        <label for="prefer">Prefer not to say</label>
+    </div>
+    <div>
+        <label for="dateof">Available Start Date:</label>
+         <input type="date" name="dateofavailable" id="dateof" required>
+    </div>
+    
+    <div>
+         <label>Preferred Location(s): </label>
+        <input type="checkbox" name="chennai" id="location">
+        <label for="location">Chennai</label>
+    </div>
+    <div>
+        <input type="checkbox" name="Bangalore" id="locate">
+        <label for="locate">Bangalore</label>
+    </div>
+    <div>
+        <input type="checkbox" name="Remote" id="locator">
+        <label for="locator">Remote</label>
+    </div>
+    <div>
+        <label for="bio">Short Bio:</label><br>
+        <textarea id="bio" name="message" rows="10" col="50">Write a breif about your background</textarea>
+    </div>
+    <div>
+        <button type="summit">Submit Application</button>
+        <button type="reset">Reset Form</button>
+    </div>
+
+
+</form>
+</body>
+</html>
