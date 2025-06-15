@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycan" height="500px" width="500px" style="border:1px solid black"></canvas>
+    <script>
+        var can=document.getElementById('mycan');
+        var contx=can.getContext('2d');
+        var grd=contx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(1,"blue");
+        grd.addColorStop(1,"green");
+        contx.fillStyle=grd;
+        contx.fillRect(50,50,300,100);
+    </script>
+</body>
+</html>
