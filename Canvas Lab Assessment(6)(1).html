@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .my{
+            padding:20px;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="my" height="500px" width="500px" style="border: 1px solid-black;"> </canvas>
+    <canvas id="my" height="500px" width="500px" style="border: 1px solid black;"> </canvas>
     <script>
         var canvas=document.getElementById('my');
         var ctx=canvas.getContext('2d');
         ctx.fillStyle="yellow";
-        ctx.fillRect(20,20,150,100);
+        ctx.fillRect(50,50,150,90);
+
+        var grd=ctx.createLinearGradient(350,50,300,50);
+        grd.addColorStop(1,"blue");
+        grd.addColorStop(0,"green");
+        ctx.fillStyle=grd;
+        ctx.fillRect(270,50,130,100);
+
+        ctx.beginPath();
+        ctx.arc(210 , 210 ,60, 0 , 2 * Math.PI );
+      ctx.strokeStyle="black";
+      ctx.stroke();
+
+         ctx.moveTo(0,0);
+        ctx.lineTo(500,500);
+        ctx.lineWidth=2;
+        
+        ctx.stroke();
+
+        ctx.font="50px bold";
+         ctx.fillStyle="red";
+         ctx.fillText("Canvas Lab",100,490);
+
+
+
+
     </script>
 </body>
 </html>

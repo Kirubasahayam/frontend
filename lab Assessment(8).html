@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div style="border:8px solid ;height:400px;width:500px;background-color:lightpink;padding:30px;margin:100px;">
+    <h1 style="text-align: center;">Students Names</h1>
+    <p class="demo">Shamili</p>
+    <p class="demo">Raviya</p>
+    <p class="demo">Princy</p>
+    
+     <h3 id="demo">Status: Absent </h3>
+     <button class="hello" onclick="add()">Highlight All Names</button>
+    <button class="hello" onclick="modify()">Change Status</button>
+    <button class="hello"  onclick="append()">Color All buttons</button> 
+    </div>   
+
+    <script>
+        let para=document.getElementsByTagName("p");
+        var b = document.getElementsByClassName("button");
+        function add(){
+        for(i=0;i<para.length;i++){
+          para[i].style.backgroundColor="lightgreen";
+        }
+    }
+       
+    function modify(){
+    let don=document.querySelector("#demo")
+        don.innerHTML="Status: Present"
+        don.style.color="#E65100";
+    }
+     let a=document.querySelectorAll(".hello")
+    function append(){
+        for(i=0;i<a.length;i++)
+        a[i].style.backgroundColor="#FFCC80";
+    }
+
+
+
+
+
+    </script>
+</body>
+</html>
