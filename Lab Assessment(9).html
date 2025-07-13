@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:1000px;
+            background-color: lightgray;
+            margin-top:200px;
+           }
+           h1{
+            background-color:  lightgray;
+            text-align: center;
+            
+            margin-left:600px;
+            margin-bottom: 60px;
+            width:500px;
+            text-shadow: 2px 2px 5px grey;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+            
+           }
+          
+       
+        form{
+            height:500px;
+            width:600px;
+             border-radius:10px;
+             padding:30px;
+            padding-left:30px;
+            margin-right: 150px;
+            margin-left:500px;
+            box-shadow:0 0 8px rgba(0,0,0,0);
+            background-color: white;
+            
+        }
+        h2{
+            font-family:Arial;
+            text-align:center;
+            color:black;
+        }
+        div{
+            padding:5px;
+        }
+        label{
+            font-family:arial;
+            color:black;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        input{
+            font-family: arial;
+            font-size: 20px;
+            width:550px;
+            height:30px;
+        }
+        textarea{
+             font-family: arial;
+            font-size: 20px;
+            height:100px;
+            width:500px;
+        }
+        button{
+             font-family:arial;
+             font-weight: bold;
+             font-size: 20px;
+            width:500px;
+            height:40px;
+            background-color: lightblue;
+            border-radius:5px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Event and EventListener</h1>
+    
+    <form id="form">
+        <h2>Student Feedback</h2>
+        <div>
+        <label>Name:</label><br>
+        <input type="text" id="name">
+        </div>
+        <div>
+        <p id="display">Characters typed: 0</p>
+        </div>
+        <div>
+        <label>Feedback:</label><br>
+        <textarea id="demo"></textarea>
+        </div>
+        <div>
+        <button id="btn">Submit</button>
+        </div>
+        <p id="res"></p>
+    </form>
+     <script>
+         window.addEventListener("scroll", function () {
+            document.getElementById("scroll").textContent =
+                "Scrolling: " + window.scrollY;
+           });
+           window.addEventListener("load", function () {
+            alert("Welcome to this page")
+           });
+           let count=0;
+           document.getElementById("name").addEventListener("keydown",function(){
+            count++;
+            document.getElementById("display").textContent="Characters typed: " + count;
+        });
+        btn.addEventListener("mouseover",function(){
+            btn.style.backgroundColor="orange";
+        });
+        btn.addEventListener("mouseout",function(){
+            btn.style.backgroundColor="lightblue";
+        });
+        document.getElementById("form").addEventListener("submit",function(e){
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let feed = document.getElementById("demo").value;
+        if(name==="" || feed===""){
+            alert(" ⚠️ please fill the necessary details");
+        }
+        else{
+            document.getElementById("res").textContent=" ✅ Thank you, "+name+" Your feedback is: "+feed;
+            document.getElementById("res").style.color="green";
+             document.getElementById("res").style.textAlign="center";
+             document.getElementById("res").style.fontFamily="arial";
+             document.getElementById("res").style.fontWeight="bold";
+              document.getElementById("res").style.fontSize="25px";
+        }
+        });
+     </script>
+</body>
+</html>
